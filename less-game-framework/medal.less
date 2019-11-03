@@ -1,0 +1,87 @@
+.game-medal{
+	background: #8F9191;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	position: relative;
+
+	&:before{
+	    content: "";
+	    position: absolute;
+	    /* top: unset; */
+	    left: 0;
+	    right: 0;
+	    bottom: 50%;
+	    height: 50px;
+	    width: 20px;
+	    display: block;
+	    background: green;
+	    z-index: -1;
+	    margin: auto;
+	}
+
+	i, span{
+		font-size: 2rem;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    margin: auto;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    color: darken(#8F9191, 35%);
+	}
+
+	span{
+		font-family: @font-game;
+		font-size: 1.5rem;
+	}
+
+	&.gold{
+		background: gold;
+
+		i, span{
+	    	color: darken(gold, 30%);
+		}
+	}
+
+	&.silver{
+		background: #6c7a86;
+
+		i, span{
+	    	color: darken(#6c7a86, 30%);
+		}	
+	}
+
+	&.bronze{
+		background: #cd7f32;
+
+		i, span{
+	    	color: darken(#cd7f32, 30%);
+		}
+	}
+
+	&.large{
+		width: 85px;
+		height: 85px;
+
+		&:before{
+	    	height: 85px;
+	    	width: 30px;
+		}
+
+		i{
+			font-size: 3rem;
+		}
+	
+		span{
+			font-size: 2rem;
+		}
+
+	}
+}

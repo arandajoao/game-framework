@@ -1,0 +1,29 @@
+.game-level{
+	border-radius: 50%;
+	background: green;
+	padding: 2rem;
+	color: white;
+	font-family: @font-game;
+	font-size: 1.5rem;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: solid 0.5rem darken(@nivel-bg, 10%);
+
+	&.small{
+		font-size: 1rem;
+		padding: 1.5rem;
+		width: 30px;
+		height: 30px;
+
+	}
+
+	&.large{
+		font-size: 2rem;
+		padding: 2.5rem;
+		width: 70px;
+		height: 70px;		
+	}
+}
