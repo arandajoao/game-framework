@@ -29,9 +29,9 @@ There's a way to customize it, using the LESS file about this component and the 
 
 The options about this component are:
 
-	- field (required): The id of progressbar element in the front-end;
-	- reference (required): The checkbox group (probably a div that contains the inputs);
-	- oncomplete: the callback function triggered when the progressbar reachs 100%
+	* [field (required):] The id of progressbar element in the front-end;
+	* [reference (required):] The checkbox group (probably a div that contains the inputs);
+	* [oncomplete:] the callback function triggered when the progressbar reachs 100%
 
 ```
 var progressbarTads = new Progressbar({
