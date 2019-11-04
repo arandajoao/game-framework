@@ -29,9 +29,9 @@ There's a way to customize it, using the LESS file about this component and the 
 
 The options about this component are:
 
-*field*(required): The id of progressbar element in the front-end;
-*reference*(required): The checkbox group (probably a div that contains the inputs);
-*oncomplete*: the callback function triggered when the progressbar reachs 100%
+	* field (required): The id of progressbar element in the front-end;
+	* reference (required): The checkbox group (probably a div that contains the inputs);
+	* oncomplete: the callback function triggered when the progressbar reachs 100%
 
 ```
 var progressbarTads = new Progressbar({
@@ -47,12 +47,12 @@ var progressbarTads = new Progressbar({
 
 The notification component is just renderized when the show function is called. When the gamification framework is used, it create a notification-area div, responsible to place notifications when they're showed. To use this component, is necessary to configure this properties:
 
-*icon*: fontawesome class icon;
-*title*;
-*description*;
-*color*: means a significance about this notification;
-*time(in seconds)*: the time of this notification will be displayed;
-*handler*: a function triggered when the notification are showed.
+	* icon: fontawesome class icon;
+	* title;
+	* description;
+	* color: means a significance about this notification;
+	* time (in seconds): the time of this notification will be displayed;
+	* handler: a function triggered when the notification are showed.
 
 
 ```
@@ -72,10 +72,10 @@ var notification = new Notification({
 
 The medals component renderizes a customizable medal in your front-end. To make this medal, is necessary that your element have a class "game-medal", and gets the attributes:
 
-*icon*: Fontawesome icon class;
-*number*: If there're no icon referenced, it's possible to set a number (but if icon is setted, the icon will have priority)
-*reference*: The element referenced (just if you are declaring it with JS);
-*color*: Hex color (it will give icon a 40% darken color). There are three colors pre-existed in this component (gold, silver and bronze) and if you want this colors, just set those names in class attribute;
+	*icon: Fontawesome icon class;
+	*number: If there're no icon referenced, it's possible to set a number (but if icon is setted, the icon will have priority)
+	*reference: The element referenced (just if you are declaring it with JS);
+	*color: Hex color (it will give icon a 40% darken color). There are three colors pre-existed in this component (gold, silver and bronze) and if you want this colors, just set those names in class attribute;
 
 Its possible to make medals in three sizes, using the small, large with the game-medal class, or just game-medal class alone to make it regular.
 
@@ -95,24 +95,15 @@ var medal = new Medal({
 });
 ```
 
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-*[Dropwizard*](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-*[Maven*](https://maven.apache.org/) - Dependency Management
-*[ROME*](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
@@ -124,7 +115,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-***Billie*Thompson***-**Initial*work*-*[PurpleBooth](https://github.com/PurpleBooth)
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -134,6 +125,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-*Hat*tip to anyone whose code was used
-*Inspiration*
-*etc*
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
