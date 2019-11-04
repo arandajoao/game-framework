@@ -17,7 +17,7 @@ There is no other frameworks viculated to it (just the Fontawesome framework but
 
 ```
 
-### Components
+## Components
 
 the components that are part of these framework are listed below:
 
@@ -29,9 +29,9 @@ There's a way to customize it, using the LESS file about this component and the 
 
 The options about this component are:
 
-	* [field (required):] The id of progressbar element in the front-end;
-	* [reference (required):] The checkbox group (probably a div that contains the inputs);
-	* [oncomplete:] the callback function triggered when the progressbar reachs 100%
+	* field (required): The id of progressbar element in the front-end;
+	* reference (required): The checkbox group (probably a div that contains the inputs);
+	* oncomplete: the callback function triggered when the progressbar reachs 100%
 
 ```
 var progressbarTads = new Progressbar({
@@ -43,16 +43,29 @@ var progressbarTads = new Progressbar({
 });
 ```
 
-## Running the tests
+### Notifications
 
-Explain how to run the automated tests for this system
+The notification component is just renderized when the show function is called. When the gamification framework is used, it create a notification-area div, responsible to place notifications when they're showed. To use this component, is necessary to configure this properties:
+	* icon: fontawesome class icon;
+	* title;
+	* description;
+	* color: means a significance about this notification;
+	* time (in seconds): the time of this notification will be displayed;
+	* handler: a function triggered when the notification are showed.
 
-### Break down into end to end tests
-
-Explain what these tests test and why
 
 ```
-Give an example
+	var notification = new Notification({
+		title: "Lorem ipsum dolor!",
+		text: "Your notification's description goes here",
+		icon: "fa fa-check",
+		color: "#ff0000",
+		time: "8",
+		handler: function()
+		{
+			alert("Notification showed!");
+		}
+	});
 ```
 
 ### And coding style tests
