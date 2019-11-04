@@ -48,10 +48,10 @@ var progressbarTads = new Progressbar({
 The notification component is just renderized when the show function is called. When the gamification framework is used, it create a notification-area div, responsible to place notifications when they're showed. To use this component, is necessary to configure this properties:
 
 	* icon: fontawesome class icon;
-	* title;
-	* description;
+	* title (required);
+	* description (required);
 	* color: means a significance about this notification;
-	* time (in seconds): the time of this notification will be displayed;
+	* time (in seconds) (required): the time of this notification will be displayed;
 	* handler: a function triggered when the notification are showed.
 
 
@@ -72,10 +72,10 @@ var notification = new Notification({
 
 The medals component renderizes a customizable medal in your front-end. To make this medal, is necessary that your element have a class "game-medal", and gets the attributes:
 
-	*icon: Fontawesome icon class;
-	*number: If there're no icon referenced, it's possible to set a number (but if icon is setted, the icon will have priority)
-	*reference: The element referenced (just if you are declaring it with JS);
-	*color: Hex color (it will give icon a 40% darken color). There are three colors pre-existed in this component (gold, silver and bronze) and if you want this colors, just set those names in class attribute;
+	* icon: Fontawesome icon class;
+	* number: If there're no icon referenced, it's possible to set a number (but if icon is setted, the icon will have priority)
+	* reference (required): The element referenced (just if you are declaring it with JS);
+	* color: Hex color (it will give icon a 40% darken color). There are three colors pre-existed in this component (gold, silver and bronze) and if you want this colors, just set those names in class attribute;
 
 Its possible to make medals in three sizes, using the small, large with the game-medal class, or just game-medal class alone to make it regular.
 
@@ -95,36 +95,55 @@ var medal = new Medal({
 });
 ```
 
-## Deployment
+### Badge
 
-Add additional notes about how to deploy this on a live system
+Badges are the simplest component of this framework, it's just used to make a title of users (with some different background color). It's possible to make a badge just putting the class "game-badge" to a element. In spite of the simplicity, it's possible to instance a Javacript object to itm just to make a simple way to change the badge text if its necessary.
+
+```
+var badge = new Badge({
+	reference (required): "#game-badge",
+	text (required): "Example"
+});
+
+badge.setText("Example 2");
+```
+
+### Level
+
+The level component is a logical way to determinate the tangible goal to the users, to doing it is necessary determinate a step that will be multiplicated to make the goal points to the next level. The level attributes are be stored in the local storage of the browser and can be getted easily.
+To build this component, is necessary to determinate the following attributes:
+	
+	* nivel: The current level of the user;
+	* step: The multiply base to calculate the goal;
+	* xp: The current points of the user in this level;
+	* field: The referenced element to show current level;
+
+To make the level advances, it's necessary call the function "setXp", passing the points gained by the user. There's a function called "onlevelup", that can be customized to make some action when the user reaches a goal.
+
+```
+var level = new Nivel({
+	nivel: 1,
+	step: 10,
+	xp: 10,
+	field: "#level-example",
+	onlevelup: function(){
+		alert("Level up! Your current level is: " + this.nivel);
+	}
+});
+```
+
+## Customizing
+
+It's possible to customize any of these components. There're a config.less file, with all the fonts and colors available to set. If customize is necessary, you need to recompile the style.less file to apply the new settings to the application.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [LESS](http://lesscss.org/) - The pre-compiler CSS framework
+* [FontAwesome](https://fontawesome.com/) - Icons management
+* [Prepros](https://prepros.io/) - Less cross-platform compiler
+* Javascript - Functionality Programming Language
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+## Author
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* **João Aranda** - Brazillian technologist programmer, focused in WEB development with JS Frameworks and PHP. 
