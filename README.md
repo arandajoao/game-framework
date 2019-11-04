@@ -46,6 +46,7 @@ var progressbarTads = new Progressbar({
 ### Notifications
 
 The notification component is just renderized when the show function is called. When the gamification framework is used, it create a notification-area div, responsible to place notifications when they're showed. To use this component, is necessary to configure this properties:
+
 	* icon: fontawesome class icon;
 	* title;
 	* description;
