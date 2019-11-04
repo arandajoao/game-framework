@@ -17,23 +17,31 @@ There is no other frameworks viculated to it (just the Fontawesome framework but
 
 ```
 
-### Installing
+### Components
 
-A step by step series of examples that tell you how to get a development env running
+the components that are part of these framework are listed below:
 
-Say what the step will be
+### Progressbar
+
+The progressbar component is conditioned about a group of checkboxes and contain a javascript's function option to deal with this component when it's finished
+
+There's a way to customize it, using the LESS file about this component and the main config LESS file. Don't forget do recompile the CSS in case of customization.
+
+The options about this component are:
+
+	- field (required): The id of progressbar element in the front-end;
+	- reference (required): The checkbox group (probably a div that contains the inputs);
+	- oncomplete: the callback function triggered when the progressbar reachs 100%
 
 ```
-Give the example
+var progressbarTads = new Progressbar({
+	field: "progress",
+	reference: ".checkbox-div",
+	oncomplete: function(){
+		console.log("Progressbar completed!")
+	}
+});
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
