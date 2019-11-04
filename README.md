@@ -56,18 +56,45 @@ The notification component is just renderized when the show function is called. 
 
 
 ```
-	var notification = new Notification({
-		title: "Lorem ipsum dolor!",
-		text: "Your notification's description goes here",
-		icon: "fa fa-check",
-		color: "#ff0000",
-		time: "8",
-		handler: function()
-		{
-			alert("Notification showed!");
-		}
-	});
+var notification = new Notification({
+	title: "Lorem ipsum dolor!",
+	text: "Your notification's description goes here",
+	icon: "fa fa-check",
+	color: "#ff0000",
+	time: "8",
+	handler: function()
+	{
+		alert("Notification showed!");
+	}
+});
 ```
+### Medals
+
+The medals component renderizes a customizable medal in your front-end. To make this medal, is necessary that your element have a class "game-medal", and gets the attributes:
+
+	*icon: Fontawesome icon class;
+	*number: If there're no icon referenced, it's possible to set a number (but if icon is setted, the icon will have priority)
+	*reference: The element referenced (just if you are declaring it with JS);
+	*color: Hex color (it will give icon a 40% darken color). There are three colors pre-existed in this component (gold, silver and bronze) and if you want this colors, just set those names in class attribute;
+
+Its possible to make medals in three sizes, using the small, large with the game-medal class, or just game-medal class alone to make it regular.
+
+There are two ways to build this component: via Javascript or just html (but is necessary the JS file). In HTML:
+
+```
+<div class="game-medal" data-icon="fa fa-star" data-color="#ffd700"></div>	
+
+```
+
+In Javascript:
+```
+var medal = new Medal({
+	icon: "fa fa-trophy",
+	reference: "#medal-example",
+	color: "#ffd700",
+});
+```
+
 
 ### And coding style tests
 
